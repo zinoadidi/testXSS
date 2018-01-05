@@ -1,0 +1,28 @@
+<div> 
+    <h3>Test XSS <label id="loader" style="display:none"><small><small>Loading Request... Please wait</small></small></label></h3>
+    <h5 id="baseUrlHolder"> </h5>
+    <table>
+        <tr><td>Request Path <br/>(Without Base Url)</td><td><input id="reqPath"/></td></tr>
+        <tr><td>Data (JSON)</td><td><textarea id="reqData" style="height: 80px;width:168px"></textarea></td></tr>
+        <tr>
+            <td>Request Type</td>
+            <td>
+                <select id="reqType">
+                    <option>POST</option>                    
+                    <option>GET</option>
+                </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>Submit Request</td>
+            <td style="text-align:-webkit-right"><button type="submit" onclick="sendRequest()">Send</button></td>
+        </tr>
+    </table>
+</div>
+
+<div id="resultDiv" style="background:#f0eeee; color:#040404; height:500px!important;width:80%Important;max-height:500px!important">
+
+</div>
+
+<script>showBaseUrl()</script>
